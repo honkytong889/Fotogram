@@ -35,6 +35,14 @@ h2 {
     color: var(--primary-color);
 }
 
+/* Header und Footer bleiben auf voller Breite (bis zu 1920px) */
+header,
+footer {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -49,6 +57,18 @@ header .logo {
     height: 38px;
     margin-right: 15px;
 
+}
+
+main,
+.content-container {
+    width: 100%;
+    max-width: 1440px;
+    /* Begrenzt den Inhalt auf die geforderten 1440px */
+    margin-left: auto;
+    /* Zentriert den gesamten Block auf großen Bildschirmen */
+    margin-right: auto;
+    /* Zentriert den gesamten Block auf großen Bildschirmen */
+    box-sizing: border-box;
 }
 
 /* Styling für das Galerie-Raster */
@@ -77,8 +97,8 @@ header .logo {
 
 /*Styling für die Bilder */
 #gallery img {
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     border-radius: 10px;
     object-fit: cover;
     display: block;
