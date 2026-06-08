@@ -39,6 +39,8 @@ header {
     align-items: center;
     padding: 0px 140px;
     height: 80px;
+    background-color: rgba(9, 33, 42, 1);
+    ;
 }
 
 header .logo {
@@ -48,10 +50,50 @@ header .logo {
 
 }
 
-img {
+/* Styling für das Galerie-Raster */
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Styling für die Buttons, die die Bilder umgeben */
+#gallery button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+/* Hover-Effekt für die Buttons */
+#gallery button:hover {
+    transform: scale(1.05);
+}
+
+/*Styling für die Bilder */
+#gallery img {
     width: 250px;
     height: 250px;
     border-radius: 10px;
-    border: none;
     object-fit: cover;
+    display: block;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+footer.img {
+    width: 100%;
+
 }
