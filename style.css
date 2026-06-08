@@ -78,6 +78,8 @@ main,
     gap: 15px;
     justify-content: center;
     margin-bottom: 80px;
+    padding: 0 10px;
+    /* Sorgt für etwas Abstand zu den Seiten auf kleineren Bildschirmen */
 }
 
 /* Styling für die Buttons, die die Bilder umgeben */
