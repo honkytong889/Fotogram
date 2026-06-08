@@ -119,12 +119,11 @@ footer {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    /* Streckt das SVG ohne Lücken über die gesamte Breite */
-
-    /* Zentriert den gesamten Inhalt im Footer */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: auto;
+    /* Abstand zum vorherigen Inhalt */
 }
 
 .footer-content {
@@ -140,9 +139,11 @@ footer {
 /* Gruppiert Logo und H3, die nun exakt mittig auf dem SVG liegen */
 .footer-center-box {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 8px;
+    justify-content: center;
+    /* Zentriert Logo und H3 vertikal */
 
 }
 
@@ -152,12 +153,11 @@ footer {
 }
 
 .footer-center-box h3 {
-    display: flex;
     margin: 0;
     font-family: sans-serif;
     color: var(--primary-color);
-    flex-direction: column;
-
+    display: block;
+    word-break: break-word
 }
 
 .footer-text {
