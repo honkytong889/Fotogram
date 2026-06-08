@@ -84,16 +84,85 @@ header .logo {
 }
 
 footer {
+    width: 100%;
+    height: auto;
+    /* Erlaubt dem Footer, sich flexibel an den Inhalt anzupassen */
+    padding: 40px 0;
+    /* Sorgt für genügend Abstand nach oben und unten */
     display: flex;
     justify-content: center;
-    margin-top: auto;
-    padding: 20px;
-    text-align: center;
-    background-color: transparent;
-    color: var(--primary-color);
+    align-items: center;
+    box-sizing: border-box;
 }
 
-footer.img {
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    /* Stapelt die Center-Box und den Copyright-Text untereinander */
+    align-items: center;
+    gap: 24px;
+    /* Abstand zwischen der SVG-Box und dem Copyright-Text darunter */
     width: 100%;
+}
 
+footer {
+    width: 100%;
+    min-height: 180px;
+    /* Garantiert eine Mindesthöhe für den Footer */
+    padding: 40px 0;
+    /* Sorgt für vertikalen Freiraum oben und unten */
+    box-sizing: border-box;
+
+    /* Hintergrund-Einstellungen für volle Breite */
+    background-image: url('assets/icon/Subtract.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* Streckt das SVG ohne Lücken über die gesamte Breite */
+
+    /* Zentriert den gesamten Inhalt im Footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    /* Stapelt die obere Box und das Copyright vertikal */
+    align-items: center;
+    gap: 20px;
+    /* Abstand zwischen (Logo+H3) und dem Copyright-Text */
+    width: 100%;
+}
+
+/* Gruppiert Logo und H3, die nun exakt mittig auf dem SVG liegen */
+.footer-center-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.footer-logo {
+    height: 40px;
+    object-fit: contain;
+}
+
+.footer-center-box h3 {
+    display: flex;
+    margin: 0;
+    font-family: sans-serif;
+    color: var(--primary-color);
+    flex-direction: column;
+
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(153, 172, 179, 1);
+    font-family: Figtree, sans-serif;
 }
