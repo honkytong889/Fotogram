@@ -264,13 +264,9 @@ footer {
 
 #modal-image {
     width: 560px;
-    /* Exakte Breite laut Vorgabe */
     height: 375px;
-    /* Exakte Höhe laut Vorgabe */
     object-fit: cover;
-    /* Schneidet das Bild proportional zu, verhindert Verzerrung */
     border-radius: 12px;
-    /* Schöne, leichte Rundung direkt am Bild */
 }
 
 /* 4. Fußzeile (Pfeile und Nummerierung) */
@@ -279,7 +275,6 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 32px;
-    /* Freiraum zwischen den Steuerelementen */
     font-family: 'Figtree', sans-serif;
     font-size: 14px;
     color: #e0e0e0;
@@ -288,15 +283,11 @@ footer {
 /* Die runden, dunkelroten Pfeil-Buttons */
 .nav-btn {
     background-color: #201317;
-    /* Sehr dunkler, matter Rot-Braun-Ton */
     color: rgba(253, 91, 79, 1);
-    ;
-    /* Helles, leuchtendes Rot für die Pfeile */
     border: none;
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    /* Macht die Schaltfläche perfekt kreisrund */
     font-size: 16px;
     cursor: pointer;
     display: flex;
