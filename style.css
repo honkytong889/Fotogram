@@ -1,41 +1,40 @@
+/* figtree-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/figtree-v9-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* figtree-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/figtree-v9-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* figtree-800 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/figtree-v9-latin-800.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 :root {
-
-    /* figtree-regular - latin */
-    @font-face {
-        font-display: swap;
-        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Figtree';
-        font-style: normal;
-        font-weight: 400;
-        src: url('../fonts/figtree-v9-latin-regular.woff2') format('woff2');
-        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-
-    /* figtree-700 - latin */
-    @font-face {
-        font-display: swap;
-        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Figtree';
-        font-style: normal;
-        font-weight: 700;
-        src: url('../fonts/figtree-v9-latin-700.woff2') format('woff2');
-        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-
-    /* figtree-800 - latin */
-    @font-face {
-        font-display: swap;
-        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Figtree';
-        font-style: normal;
-        font-weight: 800;
-        src: url('../fonts/figtree-v9-latin-800.woff2') format('woff2');
-        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-
     --primary-color: rgba(255, 255, 255, 1);
     --font-size-h1: 56px;
-    --font-size-h2: 32px;
+    --font-size-h2: 24px;
 
 }
 
@@ -52,7 +51,7 @@ body {
     min-height: 100dvh;
     background-color: black;
     color: var(--primary-color);
-    font-family: sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 h1 {
@@ -62,6 +61,7 @@ h1 {
     margin: 80px 0;
     text-align: center;
     font-size: var(--font-size-h1);
+    font-weight: 800;
 }
 
 h2 {
@@ -69,7 +69,6 @@ h2 {
     color: var(--primary-color);
 }
 
-/* Header und Footer bleiben auf voller Breite (bis zu 1920px) */
 header,
 footer {
     width: 100%;
@@ -83,7 +82,7 @@ header {
     padding: 0px 140px;
     height: 80px;
     background-color: rgba(9, 33, 42, 1);
-    ;
+
 }
 
 header .logo {
@@ -97,11 +96,8 @@ main,
 .content-container {
     width: 100%;
     max-width: 1440px;
-    /* Begrenzt den Inhalt auf die geforderten 1440px */
     margin-left: auto;
-    /* Zentriert den gesamten Block auf großen Bildschirmen */
     margin-right: auto;
-    /* Zentriert den gesamten Block auf großen Bildschirmen */
     box-sizing: border-box;
 }
 
@@ -113,7 +109,6 @@ main,
     justify-content: center;
     margin-bottom: 80px;
     padding: 0 10px;
-    /* Sorgt für etwas Abstand zu den Seiten auf kleineren Bildschirmen */
 }
 
 /* Styling für die Buttons, die die Bilder umgeben */
@@ -143,9 +138,7 @@ main,
 footer {
     width: 100%;
     height: auto;
-    /* Erlaubt dem Footer, sich flexibel an den Inhalt anzupassen */
     padding: 40px 0;
-    /* Sorgt für genügend Abstand nach oben und unten */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,22 +148,16 @@ footer {
 .footer-content {
     display: flex;
     flex-direction: column;
-    /* Stapelt die Center-Box und den Copyright-Text untereinander */
     align-items: center;
     gap: 24px;
-    /* Abstand zwischen der SVG-Box und dem Copyright-Text darunter */
     width: 100%;
 }
 
 footer {
     width: 100%;
     min-height: 180px;
-    /* Garantiert eine Mindesthöhe für den Footer */
     padding: 40px 0;
-    /* Sorgt für vertikalen Freiraum oben und unten */
     box-sizing: border-box;
-
-    /* Hintergrund-Einstellungen für volle Breite */
     background-image: url('assets/icon/Subtract.svg');
     background-repeat: no-repeat;
     background-position: center center;
@@ -179,16 +166,13 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: auto;
-    /* Abstand zum vorherigen Inhalt */
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
-    /* Stapelt die obere Box und das Copyright vertikal */
     align-items: center;
     gap: 20px;
-    /* Abstand zwischen (Logo+H3) und dem Copyright-Text */
     width: 100%;
 }
 
@@ -199,8 +183,6 @@ footer {
     align-items: center;
     gap: 8px;
     justify-content: center;
-    /* Zentriert Logo und H3 vertikal */
-
 }
 
 .footer-logo {
@@ -208,12 +190,11 @@ footer {
     object-fit: contain;
 }
 
-.footer-center-box h3 {
+.footer-center-box h2 {
     margin: 0;
     font-family: sans-serif;
     color: var(--primary-color);
     display: block;
-    word-break: break-word
 }
 
 .footer-text {
