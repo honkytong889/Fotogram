@@ -31,7 +31,8 @@ function initGallery() {
         if (img) openImageBySrc(img.getAttribute('src'));
     });
 }
-/*Findet den Index des Bildes anhand der Quelle und öffnet es.@param {string} src - Der Dateipfad des Quellbildes.*/
+/*Findet den Index des Bildes anhand der Quelle und öffnet es.
+@param {string} src - Der Dateipfad des Quellbildes.*/
 function openImageBySrc(src) {
     for (let i = 0; i < images.length; i++) {
         if (images[i].src === src) {
