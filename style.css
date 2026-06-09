@@ -250,7 +250,7 @@ footer {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     position: fixed;
     top: 50%;
-    left: 34%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
