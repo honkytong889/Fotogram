@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram - Impressum & Rechtliches</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icon/Group.svg">
+    <style>
+        body {
+            background-color: #050f14;
+            /* Sehr dunkles Blau für den Body */
+            color: #ffffff;
+            font-family: 'Figtree', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* 1. Header-Navigation */
+        header {
+            background-color: #0b1d28;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1a2f3b;
+        }
+
+        .header-navbar {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .logo {
+            width: 32px;
+            height: 32px;
+        }
+
+        .brand-name {
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.2s ease;
+        }
+
+        .navbar a:hover {
+            color: #ffffff;
+        }
+
+        /* 2. Inhaltsbereich */
+        main {
+            flex: 1;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            box-sizing: border-box;
+        }
+
+        .impressum-container {
+            line-height: 1.6;
+        }
+
+        h1 {
+            border-bottom: 2px solid #201317;
+            padding-bottom: 12px;
+            color: rgba(253, 91, 79, 1);
+
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-top: 40px;
+            margin-bottom: 24px;
+        }
+
+        h1:first-of-type {
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin-top: 24px;
+            margin-bottom: 8px;
+            color: #e0e0e0;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #b0c0c8;
+            margin: 6px 0;
+        }
+
+        a.content-link {
+            color: rgba(253, 91, 79, 1);
+            text-decoration: none;
+        }
+
+        a.content-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #0b1d28;
+            padding: 24px;
+            margin-top: 60px;
+        }
+
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            color: #a0a0a0;
+            white-space: nowrap;
+        }
+
+
+        .footer-links {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            font-size: 13px;
+            color: #a0a0a0;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-navbar">
+            <a href="index.html" class="logo-box">
+                <img src="assets/icon/Group.svg" alt="Fotogram Logo" class="logo">
+                <span class="brand-name">Fotogram</span>
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Galerie</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="impressum-container">
+        <h1 id="top">Impressum</h1>
+
+        <section>
+            <h2>Angaben gemäß § 5 DDG</h2>
+            <p>Stefan Friggemann</p>
+            <p>Fotogram Projekt - Developer Akademie</p>
+            <p>[Deine Straße und Hausnummer]</p>
+            <p>[Deine PLZ und dein Ort]</p>
+        </section>
+
+        <section>
+            <h2>Kontakt</h2>
+
+            <p>E-Mail: <a href="mailto:deine-email@beispiel.de" class="content-link">deine-email@beispiel.de</a></p>
+        </section>
+
+        <section>
+            <h2>Redaktionell verantwortlich</h2>
+            <p>Stefan Friggemann</p>
+            <p>[Anschrift wie oben]</p>
+        </section>
+
+        <section>
+            <h2>EU-Streitschlichtung</h2>
+            <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+                <a href="https://europa.eu" target="_blank" rel="noopener noreferrer"
+                    class="content-link">https://europa.eu</a>.<br>
+                Unsere E-Mail-Adresse finden Sie oben im Impressum.
+            </p>
+        </section>
+
+        <section>
+            <h2>Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h2>
+            <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+                Verbraucherschlichtungsstelle teilzunehmen.</p>
+        </section>
+
+        <h1 id="Copyrights">Urheberrechtshinweis</h1>
+        <section>
+            <p>&copy; 2026 <a href="https://developerakademie.com" target="_blank" rel="noopener"
+                    class="content-link">Design Developer Akademie.</a> Alle Rechte vorbehalten.</p>
+            <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
+                Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
+                Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+            </p>
+        </section>
+
+        <h1 id="Cookies">Einsatz von Cookies</h1>
+        <section>
+            <p>Unsere Website verwendet Cookies. Das sind kleine Textdateien, die Ihr Browser auf Ihrem Endgerät
+                speichert. Sie helfen uns dabei, unsere Website nutzerfreundlich, effektiv und sicher zu machen.</p>
+            <p>Einige Cookies sind "Session-Cookies". Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Andere
+                Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Diese ermöglichen es uns, Ihren
+                Browser beim nächsten Besuch wiederzuerkennen.</p>
+            <p>Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und
+                Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell
+                ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browsers aktivieren.</p>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <span class="footer-text">&copy; 2026 Fotogram. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="#top">Impressum</a>
+                    <a href="#Cookies">Cookie-Einstellungen</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
