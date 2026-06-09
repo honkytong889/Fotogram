@@ -16,9 +16,7 @@ let images = [
 
 let currentIndex = 0;
 
-/**
- * Initialisiert die erweiterte Bildergalerie mit Steuerung.
- */
+/*Initialisiert die erweiterte Bildergalerie mit Steuerung.*/
 function initGallery() {
     let body = document.querySelector('body');
     let gallery = document.getElementById('gallery');
@@ -33,10 +31,7 @@ function initGallery() {
         if (img) openImageBySrc(img.getAttribute('src'));
     });
 }
-/**
- * Findet den Index des Bildes anhand der Quelle und öffnet es.
- * @param {string} src - Der Dateipfad des Quellbildes.
- */
+/*Findet den Index des Bildes anhand der Quelle und öffnet es.@param {string} src - Der Dateipfad des Quellbildes.*/
 function openImageBySrc(src) {
     for (let i = 0; i < images.length; i++) {
         if (images[i].src === src) {
@@ -48,9 +43,7 @@ function openImageBySrc(src) {
     }
 }
 
-/**
- * Aktualisiert das Bild, den Titel und den Zähler im Dialog.
- */
+/* Aktualisiert das Bild, den Titel und den Zähler im Dialog.*/
 function updateDialogContent() {
     let modalImage = document.getElementById('modal-image');
     let dialogTitle = document.getElementById('dialog-title');
@@ -62,9 +55,7 @@ function updateDialogContent() {
     imageCounter.textContent = (currentIndex + 1) + '/' + images.length;
 }
 
-/**
- * Bindet die Events für Vor-, Zurück- und Schließen-Buttons.
- */
+/*Bindet die Events für Vor-, Zurück- und Schließen-Buttons.*/
 function setupNavigationListeners() {
     document.getElementById('close-modal').addEventListener('click', function () {
         document.getElementById('lightbox-modal').close();
@@ -74,17 +65,13 @@ function setupNavigationListeners() {
     document.getElementById('next-btn').addEventListener('click', navigateNext);
 }
 
-/**
- * Schaltet zum vorherigen Bild um.
- */
+/* Schaltet zum vorherigen Bild um.*/
 function navigatePrevious() {
     currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
     updateDialogContent();
 }
 
-/**
- * Schaltet zum nächsten Bild um.
- */
+/* Schaltet zum nächsten Bild um.*/
 function navigateNext() {
     currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
     updateDialogContent();
