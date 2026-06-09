@@ -23,11 +23,9 @@ function initGallery() {
     let body = document.querySelector('body');
     let gallery = document.getElementById('gallery');
     if (!body || !gallery) return;
-
     // insertAdjacentHTML repariert den Fehler und bricht keine Event-Listener
     body.insertAdjacentHTML('beforeend', renderDialogTemplate());
     setupNavigationListeners();
-
     gallery.addEventListener('click', function (event) {
         let button = event.target.closest('button');
         if (!button) return;
@@ -35,7 +33,6 @@ function initGallery() {
         if (img) openImageBySrc(img.getAttribute('src'));
     });
 }
-
 /**
  * Findet den Index des Bildes anhand der Quelle und öffnet es.
  * @param {string} src - Der Dateipfad des Quellbildes.
