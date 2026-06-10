@@ -219,7 +219,7 @@ h2 {
 /*LIGHTBOX MODAL (DIALOG) */
 
 .lightbox-dialog {
-    margin: auto;
+    /* margin: auto;
     width: 650px;
     max-width: 90%;
     height: 550px;
@@ -228,7 +228,23 @@ h2 {
     background-color: var(--color-background-modal);
     color: var(--color-primary);
     border-radius: 28px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);*/
+    border: none;
+    background-color: var(--color-background-modal);
+    color: var(--color-primary);
+    border-radius: 28px;
+    padding: 20px;
+    width: 90%;
+    /* Flexibel auf Mobilgeräten */
+    max-width: 650px;
+    /* Maximale Breite auf dem Desktop */
+    margin: auto;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
 }
 
 .lightbox-dialog::backdrop {
