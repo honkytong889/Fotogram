@@ -38,7 +38,7 @@ function openImageBySrc(src) {
         if (images[i].src === src) {
             currentIndex = i;
             updateDialogContent();
-            document.getElementById('lightbox-modal').show();
+            document.getElementById('lightbox-modal').showModal();
             break;
         }
     }

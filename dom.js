@@ -1,18 +1,22 @@
-/*Generiert die HTML-Struktur für den Dialog inklusive Navigation. Das HTML-Template für den Overlay-Dialog. */
+/* Generiert die HTML-Struktur für den Dialog inklusive Navigation. */
 function renderDialogTemplate() {
-    return `
-    <dialog id="lightbox-modal">
+  return `
+    <dialog id="lightbox-modal" class="lightbox-dialog">
       <div class="dialog-header">
-        <span id="dialog-title"></span>
-        <button id="close-modal" aria-label="Schließen">✕</button>
+        <!-- KORREKTUR: h2 statt span für einwandfreie Semantik -->
+        <h2 id="dialog-title">Vorschau</h2>
+        <!-- KORREKTUR: ID behalten und Konventions-Klasse hinzugefügt -->
+        <button id="close-modal" class="close-modal-button" aria-label="Schließen">✕</button>
       </div>
       <div class="dialog-content">
-        <img id="modal-image" src="" alt="">
+        <img id="modal-image" class="lightbox-image" src="" alt="">
       </div>
       <div class="dialog-footer">
-        <button id="prev-btn" class="nav-btn" aria-label="Vorheriges Bild">←</button>
-        <span id="image-counter">1/12</span>
-        <button id="next-btn" class="nav-btn" aria-label="Nächstes Bild">→</button>
+        <!-- KORREKTUR: ID behalten und einheitliche Klasse .nav-button genutzt -->
+        <button id="prev-btn" class="nav-button" aria-label="Vorheriges Bild">←</button>
+        <span id="image-counter" class="image-counter">1/12</span>
+        <!-- KORREKTUR: ID wieder hinzugefügt und Leerzeichen-Fehler behoben -->
+        <button id="next-btn" class="nav-button" aria-label="Nächstes Bild">→</button>
       </div>
     </dialog>
   `;
