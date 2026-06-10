@@ -81,6 +81,7 @@ function navigateNext() {
 }
 // Tastatursteuerung für Pfeiltasten hinzufügen
 document.addEventListener('keydown', function (event) {
+    let modal = document.getElementById('lightbox-modal');
     // Die Steuerung reagiert nur, wenn das Modal auch wirklich geöffnet ist
     if (!modal.open) return;
 
