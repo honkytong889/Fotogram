@@ -56,10 +56,12 @@ function updateDialogContent() {
     imageCounter.textContent = (currentIndex + 1) + '/' + images.length;
 }
 
-/*Bindet die Events für Vor-, Zurück- und Schließen-Buttons.*/
+/*Bindet die Events für Vor-, Zurück-, Schließen- und Tastatur-Buttons.*/
 function setupNavigationListeners() {
+    let modal = document.getElementById('lightbox-modal');
+
     document.getElementById('close-modal').addEventListener('click', function () {
-        document.getElementById('lightbox-modal').close();
+        modal.close();
     });
 
     document.getElementById('prev-btn').addEventListener('click', navigatePrevious);
@@ -77,5 +79,17 @@ function navigateNext() {
     currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
     updateDialogContent();
 }
+// Tastatursteuerung für Pfeiltasten hinzufügen
+document.addEventListener('keydown', function (event) {
+    // Die Steuerung reagiert nur, wenn das Modal auch wirklich geöffnet ist
+    if (!modal.open) return;
+
+    if (event.key === 'ArrowLeft') {
+        navigatePrevious();
+    } else if (event.key === 'ArrowRight') {
+        navigateNext();
+    }
+});
+
 
 initGallery();
