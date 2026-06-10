@@ -352,8 +352,8 @@ footer a {
     letter-spacing: 0.5px;
 }
 
-/* Media Query für Smartphones und Tablets (unter 1024px Breite) */
-@media (max-width: 1024px) {
+/* Media Query für Smartphones und Tablets (unter 768px Breite) */
+@media (max-width: 768px) {
     :root {
         --font-size-h1: 36px;
         /* Kleinere Überschrift auf Mobilgeräten */
