@@ -300,12 +300,7 @@ footer a {
     margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
-/* Das Bild skaliert jetzt sauber mit */
-#modal-image {
-=======
 /*#modal-image {
->>>>>>> origin/main
     width: 560px;
     height: 375px;
     object-fit: cover;
