@@ -150,18 +150,22 @@ function setupKeyboardListener() {
 function renderDialogTemplate() {
     return `
     <dialog id="lightbox-modal" class="lightbox-dialog">
-      <div class="dialog-header">
-        <h2 id="dialog-title">Vorschau</h2>
-        <button id="close-modal" class="close-modal-button" aria-label="Schließen">✕</button>
-      </div>
-      <div class="dialog-content">
+      <header class="dialog-header">
+        <h2 id="dialog-title">Preview</h2>
+        <button id="close-modal" class="close-modal-button" aria-label="Close">
+          <img src="assets/icon/close.svg" alt="Close Icon">
+        </button>
+      </header>
+      
+      <figure class="dialog-content">
         <img id="modal-image" class="lightbox-image" src="" alt="">
-      </div>
-      <div class="dialog-footer">
-        <button id="prev-btn" class="nav-button nav-button-prev" aria-label="Vorheriges Bild"></button>
+      </figure>
+      
+      <footer class="dialog-footer">
+        <button id="prev-btn" class="nav-button nav-button-prev" aria-label="Previous image"></button>
         <span id="image-counter" class="image-counter">1/12</span>
-        <button id="next-btn" class="nav-button nav-button-next" aria-label="Nächstes Bild"></button>
-      </div>
+        <button id="next-btn" class="nav-button nav-button-next" aria-label="Next image"></button>
+      </footer>
     </dialog>
   `;
 }
