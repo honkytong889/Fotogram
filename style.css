@@ -319,6 +319,10 @@ h2 {
 
 }
 
+.nav-button:focus-visible {
+    outline: none;
+}
+
 .nav-button-prev {
     background-image: url("assets/icon/Arrow-Right.svg");
     transform: rotate(180deg);

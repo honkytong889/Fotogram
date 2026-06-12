@@ -90,7 +90,7 @@ function updateDialogContent() {
 }
 
 /**
- * Bindet die Events für Vor-, Zurück- und Schließen-Buttons.
+ * Bindet die Events für Vor-, Zurück-, Schließen-Buttons und den Hintergrund.
  */
 function setupNavigationListeners() {
     const modal = document.getElementById('lightbox-modal');
@@ -99,6 +99,19 @@ function setupNavigationListeners() {
     });
     document.getElementById('prev-btn').addEventListener('click', navigatePrevious);
     document.getElementById('next-btn').addEventListener('click', navigateNext);
+    setupBackdropCloseListener(modal);
+}
+
+/**
+ * Registriert den Klick-Listener zum Schließen über den Modal-Hintergrund.
+ * @param {HTMLElement} modal - Das Lightbox-Dialogelement.
+ */
+function setupBackdropCloseListener(modal) {
+    modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.close();
+        }
+    });
 }
 
 /**
