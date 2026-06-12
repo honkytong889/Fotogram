@@ -1,7 +1,7 @@
 /** 
  * Global array containing all image data for the gallery.
  */
-var IMAGES = [
+const IMAGES = [
     { src: 'assets/img/Baum_mit_Schnee.jpg', title: 'Ein stark verschneiter Baum im tiefen Winter' },
     { src: 'assets/img/Berge.jpg', title: 'Massive Berggipfel bei klarem, blauem Himmel' },
     { src: 'assets/img/Blaumeise.jpg', title: 'Eine kleine Blaumeise sits on a branch' },
@@ -16,67 +16,93 @@ var IMAGES = [
     { src: 'assets/img/Vogel.jpg', title: 'Ein kleiner Vogel sitzt auf einem Stein ' }
 ];
 
-var currentIndex = 0;
+let currentIndex = 0;
 
 /**
  * Initializes the image gallery.
  */
 function initGallery() {
-    var gallery = document.getElementById('gallery');
+    const gallery = document.getElementById('gallery');
     if (gallery) {
         renderThumbnails(gallery);
     }
     setupKeyboardNavigation();
+    setupBackdropCloseListener();
 }
 
 /**
- * Renders all thumbnails dynamically into the gallery container.
- */
+ * Renders all thumbnails dynamically into the gallery container using modern template strings.*/
 function renderThumbnails(gallery) {
-    var html = '';
+    let html = '';
 
-    for (var i = 0; i < IMAGES.length; i++) {
-        html += '<button aria-label="Foto anzeigen" aria-haspopup="dialog" onclick="openImage(' + i + ')">';
-        html += '  <img src="' + IMAGES[i].src + '" alt="' + IMAGES[i].title + '">';
-        html += '</button>';
+    for (let i = 0; i < IMAGES.length; i++) {
+        html += `
+            <button aria-label="Foto anzeigen" aria-haspopup="dialog" onclick="openImage(${i})">
+                <img src="${IMAGES[i].src}" alt="${IMAGES[i].title}">
+            </button>
+        `;
     }
 
     gallery.innerHTML = html;
 }
 
 /**
- * Opens the dialog and displays the selected image.
- */
+ * Opens the dialog and displays the selected image. */
 function openImage(index) {
     currentIndex = index;
-    var modal = document.getElementById('lightbox-modal');
-    modal.innerHTML = renderDialogInnerTemplate();
-    updateDialogContent();
-    modal.showModal();
-    document.body.classList.add('no-scroll');
+    const modal = document.getElementById('lightbox-modal');
+    if (modal) {
+        modal.innerHTML = renderDialogInnerTemplate();
+        updateDialogContent();
+        modal.showModal();
+        document.body.classList.add('no-scroll');
+    }
 }
 
 /**
- * Closes the dialog and re-enables background scrolling.
+ * Closes the dialog box.
  */
 function closeModalWindow() {
-    var modal = document.getElementById('lightbox-modal');
-    modal.close();
-    document.body.classList.remove('no-scroll');
+    const modal = document.getElementById('lightbox-modal');
+    if (modal) {
+        modal.close();
+    }
+}
+
+/**
+ * Sets up a listener for the native close event (e.g. Escape key)
+ * to ensure background scrolling is always safely re-enabled.
+ */
+function setupBackdropCloseListener() {
+    const modal = document.getElementById('lightbox-modal');
+    if (modal) {
+        modal.addEventListener('close', () => {
+            document.body.classList.remove('no-scroll');
+        });
+    }
+}
+
+/**
+ * Handles clicks on the modal backdrop to close the dialog via event bubbling.*/
+function handleModalClick(event) {
+    const modal = document.getElementById('lightbox-modal');
+    if (event.target === modal) {
+        closeModalWindow();
+    }
 }
 
 /**
  * Updates image source, alt text, title and counter inside the dialog.
  */
 function updateDialogContent() {
-    var modalImage = document.getElementById('modal-image');
-    var dialogTitle = document.getElementById('dialog-title');
-    var imageCounter = document.getElementById('image-counter');
+    const modalImage = document.getElementById('modal-image');
+    const dialogTitle = document.getElementById('dialog-title');
+    const imageCounter = document.getElementById('image-counter');
     if (modalImage && dialogTitle && imageCounter) {
         modalImage.src = IMAGES[currentIndex].src;
         modalImage.alt = IMAGES[currentIndex].title;
         dialogTitle.textContent = IMAGES[currentIndex].title;
-        imageCounter.textContent = (currentIndex + 1) + '/' + IMAGES.length;
+        imageCounter.textContent = `${currentIndex + 1}/${IMAGES.length}`;
     }
 }
 
@@ -109,7 +135,7 @@ function navigateNext() {
  */
 function setupKeyboardNavigation() {
     document.onkeydown = function (event) {
-        var modal = document.getElementById('lightbox-modal');
+        const modal = document.getElementById('lightbox-modal');
 
         if (modal && modal.open) {
             if (event.key === 'ArrowLeft') {
@@ -118,28 +144,29 @@ function setupKeyboardNavigation() {
             if (event.key === 'ArrowRight') {
                 navigateNext();
             }
-            if (event.key === 'Escape') {
-                document.body.classList.remove('no-scroll');
-            }
         }
     };
 }
 
+/**
+ * Generates the inner HTML structure for the dialog box.*/
 function renderDialogInnerTemplate() {
-    var html = '';
-    html += '<header class="dialog-header">';
-    html += '  <h2 id="dialog-title">Preview</h2>';
-    html += '  <button id="close-modal" class="close-modal-button" aria-label="Close" onclick="closeModalWindow()">';
-    html += '    <img src="assets/icon/close.svg" alt="Close Icon">';
-    html += '  </button>';
-    html += '</header>';
-    html += '<figure class="dialog-content" onclick="closeModalWindow()">';
-    html += '  <img id="modal-image" class="lightbox-image" src="" alt="" onclick="event.stopPropagation()">';
-    html += '</figure>';
-    html += '<footer class="dialog-footer">';
-    html += '  <button id="prev-btn" class="nav-button nav-button-prev" aria-label="Previous image" onclick="navigatePrevious()"></button>';
-    html += '  <span id="image-counter" class="image-counter">1/12</span>';
-    html += '  <button id="next-btn" class="nav-button nav-button-next" aria-label="Next image" onclick="navigateNext()"></button>';
-    html += '</footer>';
-    return html;
+    return `
+        <div class="dialog-wrapper" onclick="event.stopPropagation()">
+            <header class="dialog-header">
+                <h2 id="dialog-title">Preview</h2>
+                <button id="close-modal" class="close-modal-button" aria-label="Close" onclick="closeModalWindow()">
+                    <img src="assets/icon/close.svg" alt="Close Icon">
+                </button>
+            </header>
+            <figure class="dialog-content">
+                <img id="modal-image" class="lightbox-image" src="" alt="">
+            </figure>
+            <footer class="dialog-footer">
+                <button id="prev-btn" class="nav-button nav-button-prev" aria-label="Previous image" onclick="navigatePrevious()"></button>
+                <span id="image-counter" class="image-counter">1/12</span>
+                <button id="next-btn" class="nav-button nav-button-next" aria-label="Next image" onclick="navigateNext()"></button>
+            </footer>
+        </div>
+    `;
 }
