@@ -219,16 +219,6 @@ h2 {
 /*LIGHTBOX MODAL (DIALOG) */
 
 .lightbox-dialog {
-    /* margin: auto;
-    width: 650px;
-    max-width: 90%;
-    height: 550px;
-    padding: 20px;
-    border: none;
-    background-color: var(--color-background-modal);
-    color: var(--color-primary);
-    border-radius: 28px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);*/
     border: none;
     background-color: var(--color-background-modal);
     color: var(--color-primary);
@@ -243,7 +233,6 @@ h2 {
     left: 0;
     right: 0;
     bottom: 0;
-
     box-sizing: border-box;
 }
 
@@ -335,7 +324,6 @@ h2 {
     transform: rotate(180deg);
 }
 
-/* Rechter Pfeil nutzt dasselbe SVG, wird aber einfach um 180 Grad gedreht */
 .nav-button-next {
     background-image: url('assets/icon/Arrow-Right.svg');
 
