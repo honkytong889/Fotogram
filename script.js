@@ -27,6 +27,7 @@ function initGallery() {
     const gallery = document.getElementById('gallery');
     if (!body || !gallery) return;
     renderThumbnails(gallery);
+    //insertAdjacentHTML bricht keinen Event-listner da ich ihn nicht in der index.html stehen habe
     body.insertAdjacentHTML('beforeend', renderDialogTemplate());
     setupNavigationListeners();
     setupGalleryClickListener(gallery);
