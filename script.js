@@ -3,9 +3,9 @@
  * @type {Array<{src: string, title: string}>}
  */
 const IMAGES = [
-    { src: 'assets/img/Baum_mit_Schnee.jpg', title: 'Ein einsamer, stark verschneiter Baum im tiefen Winter' },
+    { src: 'assets/img/Baum_mit_Schnee.jpg', title: 'Ein stark verschneiter Baum im tiefen Winter' },
     { src: 'assets/img/Berge.jpg', title: 'Massive Berggipfel bei klarem, blauem Himmel' },
-    { src: 'assets/img/Blaumeise.jpg', title: 'Eine kleine Blaumeise sitzt auf einem Stein und blickt direkt in die Kamera' },
+    { src: 'assets/img/Blaumeise.jpg', title: 'Eine kleine Blaumeise sitzt auf einem Ast' },
     { src: 'assets/img/Dunklewolke.webp', title: 'Eine bedrohliche, dunkle Gewitterwolke über einer Landschaft' },
     { src: 'assets/img/Ente_im_wasser.jpg', title: 'Eine Stockente sitzt aufrecht im Wasser und schwingt die Flügel nach vorne' },
     { src: 'assets/img/Hurrikane.jpg', title: 'Satellitenaufnahme eines rotierenden Hurrikans über dem Ozean' },
