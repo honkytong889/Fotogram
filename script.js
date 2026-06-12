@@ -3,18 +3,18 @@
  * @type {Array<{src: string, title: string}>}
  */
 const IMAGES = [
-    { src: 'assets/img/Baum_mit_Schnee.jpg', title: 'Baum mit Schnee' },
-    { src: 'assets/img/Berge.jpg', title: 'Berge' },
-    { src: 'assets/img/Blaumeise.jpg', title: 'Blaumeise' },
-    { src: 'assets/img/Dunklewolke.webp', title: 'Dunkle Wolke' },
-    { src: 'assets/img/Ente_im_wasser.jpg', title: 'Ente im Wasser' },
-    { src: 'assets/img/Hurrikane.jpg', title: 'Hurrikane' },
-    { src: 'assets/img/Leopardenbabys.jpg', title: 'Leopardenbabys' },
-    { src: 'assets/img/Mann_mit_Taschenlampe.jpg', title: 'Mann mit Taschenlampe' },
-    { src: 'assets/img/Schneebedeckte_Berge.jpg', title: 'Schneebedeckte Berge' },
-    { src: 'assets/img/See.jpg', title: 'See' },
-    { src: 'assets/img/Straße.jpg', title: 'Straße' },
-    { src: 'assets/img/Vogel.jpg', title: 'Vogel' }
+    { src: 'assets/img/Baum_mit_Schnee.jpg', title: 'Ein einsamer, stark verschneiter Baum im tiefen Winter' },
+    { src: 'assets/img/Berge.jpg', title: 'Massive Berggipfel bei klarem, blauem Himmel' },
+    { src: 'assets/img/Blaumeise.jpg', title: 'Eine kleine Blaumeise sitzt auf einem Stein und blickt direkt in die Kamera' },
+    { src: 'assets/img/Dunklewolke.webp', title: 'Eine bedrohliche, dunkle Gewitterwolke über einer Landschaft' },
+    { src: 'assets/img/Ente_im_wasser.jpg', title: 'Eine Stockente sitzt aufrecht im Wasser und schwingt die Flügel nach vorne' },
+    { src: 'assets/img/Hurrikane.jpg', title: 'Satellitenaufnahme eines rotierenden Hurrikans über dem Ozean' },
+    { src: 'assets/img/Leopardenbabys.jpg', title: 'Zwei kleine Leopardenbeute spielen auf einem Felsen' },
+    { src: 'assets/img/Mann_mit_Taschenlampe.jpg', title: 'Silhouette eines Mannes, der mit einer Taschenlampe in den Nachthimmel leuchtet' },
+    { src: 'assets/img/Schneebedeckte_Berge.jpg', title: 'Eine Bergkette, deren Spitzen komplett mit weißem Schnee bedeckt sind' },
+    { src: 'assets/img/See.jpg', title: 'Ein stiller Bergsee, in dem sich die umliegenden Wälder spiegeln' },
+    { src: 'assets/img/Straße.jpg', title: 'Eine leere Straße,in der Nacht die geradewegs auf den Horizont zuführt' },
+    { src: 'assets/img/Vogel.jpg', title: 'Ein kleiner Vogel sitzt auf einem Stein ' }
 ];
 
 let currentIndex = 0;
