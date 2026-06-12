@@ -170,4 +170,3 @@ function renderDialogTemplate() {
   `;
 }
 
-initGallery();

@@ -269,7 +269,6 @@ h2 {
     font-size: 18px;
     color: var(--color-primary);
     cursor: pointer;
-    padding: 0px 8px;
     transition: opacity 0.2s ease;
 }
 
