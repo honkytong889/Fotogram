@@ -261,6 +261,7 @@ h2 {
     font-size: 18px;
     font-weight: 700;
     text-align: left;
+    min-height: 44px;
 }
 
 .close-modal-button {
@@ -393,6 +394,7 @@ h2 {
         text-align: left;
         line-height: 1.2;
         word-break: break-word;
+        min-height: 60px;
     }
 
     .close-modal-button {
@@ -433,5 +435,9 @@ h2 {
 
     .dialog-footer {
         gap: 24px;
+    }
+
+    .no-scroll {
+        overflow: hidden;
     }
 }
