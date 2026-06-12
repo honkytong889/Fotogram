@@ -111,7 +111,6 @@ function setupKeyboardNavigation() {
     document.onkeydown = function (event) {
         var modal = document.getElementById('lightbox-modal');
 
-        // Only react to keys if the modal is currently open
         if (modal && modal.open) {
             if (event.key === 'ArrowLeft') {
                 navigatePrevious();
@@ -119,7 +118,6 @@ function setupKeyboardNavigation() {
             if (event.key === 'ArrowRight') {
                 navigateNext();
             }
-            // Sync background scrolling state when closing via 'Escape' key
             if (event.key === 'Escape') {
                 document.body.classList.remove('no-scroll');
             }
