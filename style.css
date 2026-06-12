@@ -60,6 +60,7 @@ body {
     background-color: black;
     color: var(--color-primary);
     font-family: 'Figtree', sans-serif;
+    overflow: hidden;
 }
 
 /* TYPOGRAPHY*/
@@ -235,6 +236,7 @@ h2 {
     right: 0;
     bottom: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .lightbox-dialog::backdrop {
@@ -262,6 +264,7 @@ h2 {
     font-weight: 700;
     text-align: left;
     min-height: 44px;
+    align-items: center;
 }
 
 .close-modal-button {
